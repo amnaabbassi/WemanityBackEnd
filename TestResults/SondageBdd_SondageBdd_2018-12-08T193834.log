@@ -1,0 +1,43 @@
+﻿2018-12-08T19:38:34.7704783+01:00;VSTestExecutionThread;Info;SpecFlow+Runner 1.8.5 execution started
+2018-12-08T19:38:34.7734756+01:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2018-12-08T19:38:34.9144787+01:00;VSTestExecutionThread;Info;SpecRun Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2018-12-08T19:38:34.9144787+01:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll
+2018-12-08T19:38:34.9144787+01:00;VSTestExecutionThread;Info;Profile: SondageBdd
+2018-12-08T19:38:44.0134611+01:00;Thread#13;Info;starting test run
+2018-12-08T19:38:44.0214626+01:00;Thread#13;Info;Discovering target: Default
+2018-12-08T19:38:44.0214626+01:00;Thread#13;Info;Discovering tests from assembly: C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll
+Appdomain Disposed
+framework error: System.BadImageFormatException: Impossible de charger le fichier ou l'assembly 'file:///C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll' ou une de ses dépendances. Tentative de chargement d’un programme de format incorrect.
+Nom de fichier : 'file:///C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll'
+   à System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   à System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   à System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   à System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   à System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.AssemblySpecRunTestCollectionProvider.BuildTestCollectionFromAssembly(String testAssemblyPath, FilterItem filterPredicate, INodeIdProvider& nodeIdProvider, TestCollection parentCollection)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.AssemblySpecRunTestCollectionProvider.BuildTestCollectionFromAssembly(String testAssemblyPath, FilterItem filterPredicate, INodeIdProvider& nodeIdProvider, TestCollection parentCollection)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.TestSuiteProvider.BuildTestCollectionFromAssembly(String testAssemblyPath, FilterItem filterPredicate, INodeIdProvider& nodeIdProvider, TestCollection parentCollection)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.TestSuiteProvider.GetTestSuite(TestProfile testProfile)
+   à TechTalk.SpecRun.Framework.TestSuiteRunner.Run()
+
+AVT : la journalisation de liaison d'assembly est désactivée.
+Pour activer la journalisation des échecs de liaison d'assembly, attribuez la valeur 1 à la valeur de Registre [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD).
+Remarque : une certaine perte de performance est associée à l'enregistrement dans le journal des échecs de liaison d'assembly.
+Pour désactiver cette fonctionnalité, supprimez la valeur de Registre [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2018-12-08T19:38:44.0984605+01:00;Thread#13;Info;test run finished
+2018-12-08T19:38:44.0984605+01:00;Thread#13;Info;publishing test results
+2018-12-08T19:38:44.1284576+01:00;Thread#13;Info;test results published
+2018-12-08T19:38:44.1284576+01:00;Thread#13;Info;generating reports
+2018-12-08T19:38:44.1354576+01:00;Thread#13;Info;creating 1 report(s)
+2018-12-08T19:38:44.1354576+01:00;Thread#13;Info;generate Report ReportTemplate.cshtml
+2018-12-08T19:38:44.9065419+01:00;Thread#13;Info;reports generated
+Total: 0
+Succeeded: 0
+Ignored: 0
+Pending: 0
+Skipped: 0
+Failed: 0
+2018-12-08T19:38:44.9115421+01:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+2018-12-08T19:38:44.9115421+01:00;VSTestExecutionThread;Info;adding Test Execution Report 'C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\TestResults\SondageBdd_SondageBdd_2018-12-08T193834.html'
+2018-12-08T19:38:44.9255617+01:00;VSTestExecutionThread;Info;Log file: file:///C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\TestResults\SondageBdd_SondageBdd_2018-12-08T193834.log

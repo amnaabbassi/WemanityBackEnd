@@ -1,0 +1,53 @@
+﻿2018-12-08T19:37:47.3720015+01:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2018-12-08T19:37:47.3790026+01:00;VSTestExecutionThread;Info;SpecFlow+Runner 1.8.5 execution started
+2018-12-08T19:37:47.3800021+01:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2018-12-08T19:37:47.6610009+01:00;VSTestExecutionThread;Info;SpecRun Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2018-12-08T19:37:47.6610009+01:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll
+2018-12-08T19:37:47.6610009+01:00;VSTestExecutionThread;Info;Profile: SondageBdd
+2018-12-08T19:37:59.7830580+01:00;Thread#15;Info;starting test run
+2018-12-08T19:37:59.8044067+01:00;Thread#15;Info;Discovering target: Default
+2018-12-08T19:37:59.8044067+01:00;Thread#15;Info;Discovering tests from assembly: C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll
+Appdomain Disposed
+framework error: System.BadImageFormatException: Impossible de charger le fichier ou l'assembly 'file:///C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll' ou une de ses dépendances. Tentative de chargement d’un programme de format incorrect.
+Nom de fichier : 'file:///C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll'
+   à System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   à System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   à System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   à System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   à System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.AssemblySpecRunTestCollectionProvider.BuildTestCollectionFromAssembly(String testAssemblyPath, FilterItem filterPredicate, INodeIdProvider& nodeIdProvider, TestCollection parentCollection)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.AssemblySpecRunTestCollectionProvider.BuildTestCollectionFromAssembly(String testAssemblyPath, FilterItem filterPredicate, INodeIdProvider& nodeIdProvider, TestCollection parentCollection)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.TestSuiteProvider.BuildTestCollectionFromAssembly(String testAssemblyPath, FilterItem filterPredicate, INodeIdProvider& nodeIdProvider, TestCollection parentCollection)
+   à TechTalk.SpecRun.Framework.TestSuiteProviders.TestSuiteProvider.GetTestSuite(TestProfile testProfile)
+   à TechTalk.SpecRun.Framework.TestSuiteRunner.Run()
+
+=== Informations d'état de liaison préalable ===
+JRN : liaison where-ref. Emplacement = C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\SondageBdd\bin\Debug\SondageBdd.dll
+JRN : Appbase = file:///C:/Users/abbassi/Downloads/test-master/sondage/SondageWebApi/SondageBdd/bin/Debug
+JRN : PrivatePath initial = NULL
+Assembly appelant : (Unknown).
+===
+JRN : cette liaison démarre dans le contexte de chargement de LoadFrom.
+AVT : l'image native ne sera pas détectée dans le contexte LoadFrom. Elle sera détectée uniquement dans le contexte de chargement par défaut, comme pour Assembly.Load().
+JRN : utilisation du fichier de configuration de l'application : C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\COMMON7\IDE\EXTENSIONS\TESTPLATFORM\testhost.x86.exe.Config
+JRN : utilisation du fichier de configuration d'hôte : 
+JRN : utilisation du fichier de configuration de l'ordinateur à partir de C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+JRN : tentative de téléchargement de la nouvelle URL file:///C:/Users/abbassi/Downloads/test-master/sondage/SondageWebApi/SondageBdd/bin/Debug/SondageBdd.dll.
+ERR : impossible de terminer l'installation de l'assembly (hr = 0x8007000b). Détection terminée.
+
+2018-12-08T19:37:59.9815952+01:00;Thread#15;Info;test run finished
+2018-12-08T19:37:59.9815952+01:00;Thread#15;Info;publishing test results
+2018-12-08T19:38:00.0778305+01:00;Thread#15;Info;test results published
+2018-12-08T19:38:00.0778305+01:00;Thread#15;Info;generating reports
+2018-12-08T19:38:00.0848108+01:00;Thread#15;Info;creating 1 report(s)
+2018-12-08T19:38:00.0848108+01:00;Thread#15;Info;generate Report ReportTemplate.cshtml
+2018-12-08T19:38:00.9071772+01:00;Thread#15;Info;reports generated
+Total: 0
+Succeeded: 0
+Ignored: 0
+Pending: 0
+Skipped: 0
+Failed: 0
+2018-12-08T19:38:00.9141738+01:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+2018-12-08T19:38:00.9141738+01:00;VSTestExecutionThread;Info;adding Test Execution Report 'C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\TestResults\SondageBdd_SondageBdd_2018-12-08T193747.html'
+2018-12-08T19:38:00.9291873+01:00;VSTestExecutionThread;Info;Log file: file:///C:\Users\abbassi\Downloads\test-master\sondage\SondageWebApi\TestResults\SondageBdd_SondageBdd_2018-12-08T193747.log
