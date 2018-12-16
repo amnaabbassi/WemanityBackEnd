@@ -7,6 +7,6 @@
   POST a User
   You can type the URL  to Get an existant user :
   http://localhost:55251/api/users/login </p>
- ![image](https://github.com/amnaabbassi/WemanityBackEnd/issues/1)
+(https://github.com/amnaabbassi/WemanityBackEnd/issues/1)
 
 
