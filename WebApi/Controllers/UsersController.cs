@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using Models.Interfaces;
@@ -41,8 +36,15 @@ namespace WebApi.Controllers
     [HttpPost("login")]
     public ActionResult<User> Login(User user)
     {
-      return _userService.Login(user);
+      User logedUser = _userService.Login(user);
+      if (logedUser != null)
+      {
+        return Ok(logedUser);
+      }
+      else
+      {
+        return NotFound();
+      }
     }
   }
-
 }

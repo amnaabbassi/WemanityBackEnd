@@ -38,13 +38,13 @@ namespace WebApi
             services.AddDbContext<SondageDbcontext>(opt => opt.UseInMemoryDatabase());
             //DI 
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-            services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
+            
             //service user
             services.AddScoped<IUserService, UserService>();
             services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
 
             services.AddScoped<IVoteService, VoteService>();
-            services.AddScoped<IVoteRepository , VoteRepository>();
+            
 
             services.AddMemoryCache();
 

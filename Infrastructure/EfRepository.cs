@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure
 {
-  public class EfRepository<T> : IRepository<T>, IAsyncRepository<T> where T : BaseEntity
+  public class EfRepository<T> : IRepository<T> where T : BaseEntity
   {
     protected readonly SondageDbcontext _dbContext;
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Models.Interfaces;
 
@@ -21,20 +16,6 @@ namespace WebApi.Controllers
       _voteService = voteService;
     }
 
-    // GET: api/Vote
-    [HttpGet]
-    public IEnumerable<string> Get()
-    {
-      return new string[] { "value1", "value2" };
-    }
-
-    // GET: api/Vote/5
-    [HttpGet("{id}", Name = "Get")]
-    public string Get(int id)
-    {
-      return "value";
-    }
-
     /// <summary>
     /// insert vote to database in our case json file
     /// </summary>
@@ -44,18 +25,6 @@ namespace WebApi.Controllers
     public ActionResult<bool> AddUserVote([FromBody] Vote vote)
     {
       return _voteService.AddVote(vote);
-    }
-
-    // PUT: api/Vote/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
-
-    // DELETE: api/ApiWithActions/5
-    [HttpDelete("{id}")]
-    public void Delete(int id)
-    {
     }
   }
 }
