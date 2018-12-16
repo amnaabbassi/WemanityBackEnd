@@ -1,8 +1,8 @@
-<h3>Software versions<h3>
+<h5>Software versions<h5>
   <p>Visual Studio 2017 </p>
   <p>Web API 2</p>
   
-<h3>Running locally<h3>
+<h5>Running locally<h5>
   <p>Run Visual studio and than you can use postman to see the result.
   POST a User
   You can type the URL  to Get an existant user :
