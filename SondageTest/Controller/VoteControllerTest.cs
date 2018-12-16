@@ -11,41 +11,41 @@ using WebApi.Controllers;
 
 namespace SondageTest.Controller
 {
-    [TestFixture]
-    public class VoteControllerTest
+  [TestFixture]
+  public class VoteControllerTest
+  {
+    private Mock<VoteController> mockcontroller;
+
+    [TestCase(true)]
+    [TestCase(false)]
+    public void AddVotesTes(bool isValid)
     {
-        private Mock<VoteController> mockcontroller;
+      #region moq object
+      Mock<IVoteService> mockedVoteService = new Mock<IVoteService>();
+      mockcontroller = new Mock<VoteController>(mockedVoteService.Object) { CallBase = true };
+      #endregion
 
-        [TestCase(true)]
-        [TestCase(false)]
-        public void AddVotesTes(bool isValid)
-        {
-            #region moq object
-            Mock<IVoteService> mockedVoteService = new Mock<IVoteService>();
-            mockcontroller = new Mock<VoteController>(mockedVoteService.Object) { CallBase = true };
-            #endregion
+      #region Act
+      mockedVoteService.Setup(c => c.AddVote(It.IsAny<Vote>())).Returns(isValid);
+      var res = mockcontroller.Object.AddUserVote(It.IsAny<Vote>());
+      var ContentResult = res.Value;
+      #endregion
 
-            #region Act
-            mockedVoteService.Setup(c => c.AddVote(It.IsAny<Vote>())).Returns(isValid);
-            var res = mockcontroller.Object.AddUserVote(It.IsAny<Vote>());
-            var ContentResult = res.Value;
-            #endregion
+      #region Assert
+      if (isValid)
+      {
+        Assert.IsTrue(res.Value);
+      }
+      else
+      {
+        Assert.IsFalse(res.Value);
+      }
 
-            #region Assert
-            if (isValid)
-            {
-                Assert.IsTrue(res.Value);
-            }
-            else
-            {
-                Assert.IsFalse(res.Value);
-            }
+      #endregion
 
-            #endregion
-
-            #region verify
-            mockedVoteService.Verify(c => c.AddVote(It.IsAny<Vote>()));
-            #endregion
-        }
+      #region verify
+      mockedVoteService.Verify(c => c.AddVote(It.IsAny<Vote>()));
+      #endregion
     }
+  }
 }

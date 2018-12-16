@@ -9,49 +9,53 @@ using Models.Interfaces;
 
 namespace WebApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    [EnableCors("MyPolicy")]
-    public class VoteController : ControllerBase
+  [Route("api/[controller]")]
+  [ApiController]
+  [EnableCors("MyPolicy")]
+  public class VoteController : ControllerBase
+  {
+    private readonly IVoteService _voteService;
+
+    public VoteController(IVoteService voteService)
     {
-        private readonly IVoteService _voteService;
-
-        public VoteController(IVoteService voteservices)
-        {
-            _voteService = voteservices;
-        }
-
-        // GET: api/Vote
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/Vote/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/vote/voteuser
-        [HttpPost("voteuser")]
-        public ActionResult<bool> AddUserVote([FromBody] Vote vote)
-        {           
-            return _voteService.AddVote(vote);
-        }
-
-        // PUT: api/Vote/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+      _voteService = voteService;
     }
+
+    // GET: api/Vote
+    [HttpGet]
+    public IEnumerable<string> Get()
+    {
+      return new string[] { "value1", "value2" };
+    }
+
+    // GET: api/Vote/5
+    [HttpGet("{id}", Name = "Get")]
+    public string Get(int id)
+    {
+      return "value";
+    }
+
+    /// <summary>
+    /// insert vote to database in our case json file
+    /// </summary>
+    /// <param name="vote"></param>
+    /// <returns></returns>
+    [HttpPost("voteuser")]
+    public ActionResult<bool> AddUserVote([FromBody] Vote vote)
+    {
+      return _voteService.AddVote(vote);
+    }
+
+    // PUT: api/Vote/5
+    [HttpPut("{id}")]
+    public void Put(int id, [FromBody] string value)
+    {
+    }
+
+    // DELETE: api/ApiWithActions/5
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
+    }
+  }
 }

@@ -10,49 +10,39 @@ using Models.Interfaces;
 
 namespace WebApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    [EnableCors("MyPolicy")]
-    public class UsersController : ControllerBase
+  [Route("api/[controller]")]
+  [ApiController]
+  [EnableCors("MyPolicy")]
+  public class UsersController : ControllerBase
+  {
+    private readonly IUserService _userService;
+
+    public UsersController(IUserService userService)
     {
-        private readonly IUserService _userService;
-
-        public UsersController(IUserService userService)
-        {
-            _userService = userService;
-        }
-
-        // GET: api/Users
-        [HttpGet]
-        public IActionResult Get()
-        {
-            var res = _userService.GetAllUser();
-            return Ok(res);
-        }
-
-        // Post: api/users/login
-        [HttpPost("login")]
-        public ActionResult<User> Login(User user)
-        {
-            return _userService.Login(user);
-        }
-
-        // POST: api/Users
-        [HttpPost]
-        public void Post(User value)
-        {
-        }
-
-        // PUT: api/Users/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+      _userService = userService;
     }
+
+    /// <summary>
+    /// GET list of user using api/Users endpoint
+    /// </summary>
+    /// <returns>returns IActionResult</returns>
+    [HttpGet]
+    public IActionResult Get()
+    {
+      var userList = _userService.GetAllUser();
+      return Ok(userList);
+    }
+
+    /// <summary>
+    /// login to authentification using  api/users/login
+    /// </summary>
+    /// <param name="user">the user</param>
+    /// <returns>return ActionResult<User></User></returns>
+    [HttpPost("login")]
+    public ActionResult<User> Login(User user)
+    {
+      return _userService.Login(user);
+    }
+  }
+
 }

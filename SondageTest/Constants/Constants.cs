@@ -4,8 +4,8 @@ using System.Text;
 
 namespace SondageTest
 {
-    public class Constants
-    {
+  public class Constants
+  {
     public const int ID_USER = 2;
     public const string USERNAME = "name user1";
     public const string LASTNAME = "last name user1";
@@ -22,6 +22,6 @@ namespace SondageTest
     //Vote
     public const int ID_Vote_1 = 1;
     public const int ID_USER_Vote_1 = 1;
-    public const string COUNTRY_1 = "Tunisie"; 
+    public const string COUNTRY_1 = "Tunisie";
   }
 }
